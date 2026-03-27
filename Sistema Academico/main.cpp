@@ -1,6 +1,7 @@
-#include <stdio.h>
+//#include <stdio.h>
+#include "pessoa.h"
 
-struct Pessoa{
+/*struct Pessoa{
     int diaP, mesP, anoP, idadeP;
     Pessoa (int diaNa, int mesNa, int anoNa){
         diaP = diaNa;
@@ -19,7 +20,7 @@ struct Pessoa{
             }
         }
     }
-};
+};*/
 
 /*void Calc_Idade (struct Pessoa& p, int dia, int mes, int ano){
     //int idd = ano - p.ano;
