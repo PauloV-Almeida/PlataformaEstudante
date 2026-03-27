@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 struct Pessoa{
-public:
+private:
     int diaP, mesP, anoP, idadeP;
+public:
     Pessoa (int diaNa, int mesNa, int anoNa){
         diaP = diaNa;
         mesP = mesNa;
@@ -19,5 +20,8 @@ public:
                 idadeP --;
             }
         }
+    }
+    int informaIdade (){
+        return idadeP;
     }
 };
