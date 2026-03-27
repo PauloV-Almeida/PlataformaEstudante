@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-struct Pessoa{
+class Pessoa{
 private:
     int diaP, mesP, anoP, idadeP;
 public:
