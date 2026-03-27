@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1774571788 source:c:\users\danie\onedrive\documents\sistema academico\main.cpp
+	"pessoa.h"
+
+1774572664 c:\users\danie\onedrive\documents\sistema academico\pessoa.h
+	<stdio.h>
+
