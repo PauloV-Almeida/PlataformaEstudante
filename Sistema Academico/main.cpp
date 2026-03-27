@@ -2,6 +2,12 @@
 
 struct Pessoa{
     int diaP, mesP, anoP, idadeP;
+    Pessoa (int diaNa, int mesNa, int anoNa){
+        diaP = diaNa;
+        mesP = mesNa;
+        anoP = anoNa;
+        idadeP = -1;
+    }
     void Calc_Idade (int diaAT, int mesAT, int anoAT){
         idadeP = anoAT - anoP;
         if (mesP > mesAT){
@@ -33,14 +39,16 @@ struct Pessoa{
 }*/
 
 int main (){
-    struct Pessoa Einstein, Newton;
-    Einstein.diaP = 14;
-    Einstein.mesP = 3;
-    Einstein.anoP = 1879;
+    Pessoa Einstein (14, 3, 1879);
+    Pessoa Newton (4, 1, 1643);
+    //struct Pessoa Einstein, Newton;
+    //Einstein.diaP = 14;
+    //Einstein.mesP = 3;
+    //Einstein.anoP = 1879;
     //Einstein.idade = -1;
-    Newton.diaP = 4;
-    Newton.mesP = 1;
-    Newton.anoP = 1643;
+    //Newton.diaP = 4;
+    //Newton.mesP = 1;
+    //Newton.anoP = 1643;
     //Newton.idade = -1;
     //Einstein.idade = Calc_Idade (Einstein, 10, 3, 2026);
     //Calc_Idade (Einstein, 10, 3, 2026);
