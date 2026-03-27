@@ -4,7 +4,7 @@ class Pessoa{
 private:
     int diaP, mesP, anoP, idadeP;
 public:
-    Pessoa (int diaNa, int mesNa, int anoNa){
+    /*Pessoa (int diaNa, int mesNa, int anoNa){
         diaP = diaNa;
         mesP = mesNa;
         anoP = anoNa;
@@ -23,5 +23,8 @@ public:
     }
     int informaIdade (){
         return idadeP;
-    }
+    }*/
+    Pessoa (int diaNa, int mesNa, int anoNa);
+    void Calc_Idade (int diaAT, int mesAT, int anoAT);
+    int informaIdade ();
 };
