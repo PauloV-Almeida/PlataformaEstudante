@@ -57,8 +57,8 @@ int main (){
     //Newton.idade = Calc_Idade (Newton, 10, 3, 2026);
     //Calc_Idade (Newton, 10, 3, 2026);
     Newton.Calc_Idade (10, 3, 2026);
-    printf ("Einstein teria/faria %d anos em 2026 \n", Einstein.idadeP);
-    printf ("Newton teria/faria %d anos em 2026 \n", Newton.idadeP);
+    printf ("Einstein teria/faria %d anos em 2026 \n", Einstein.informaIdade ());
+    printf ("Newton teria/faria %d anos em 2026 \n", Newton.informaIdade ());
     getchar ();
     return 0;
 }
