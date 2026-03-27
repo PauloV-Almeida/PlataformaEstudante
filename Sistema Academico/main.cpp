@@ -1,10 +1,21 @@
 #include <stdio.h>
 
 struct Pessoa{
-    int dia, mes, ano, idade;
+    int diaP, mesP, anoP, idadeP;
+    void Calc_Idade (int diaAT, int mesAT, int anoAT){
+        idadeP = anoAT - anoP;
+        if (mesP > mesAT){
+            idadeP --;
+        }
+        else if (mesP == mesAT){
+            if (diaP > diaAT){
+                idadeP --;
+            }
+        }
+    }
 };
 
-void Calc_Idade (struct Pessoa& p, int dia, int mes, int ano){
+/*void Calc_Idade (struct Pessoa& p, int dia, int mes, int ano){
     //int idd = ano - p.ano;
     p.idade = ano - p.ano;
     if (p.mes > mes){
@@ -19,24 +30,26 @@ void Calc_Idade (struct Pessoa& p, int dia, int mes, int ano){
     }
     //return idd;
     //return p.idade;
-}
+}*/
 
 int main (){
     struct Pessoa Einstein, Newton;
-    Einstein.dia = 14;
-    Einstein.mes = 3;
-    Einstein.ano = 1879;
-    Einstein.idade = -1;
-    Newton.dia = 4;
-    Newton.mes = 1;
-    Newton.ano = 1643;
-    Newton.idade = -1;
+    Einstein.diaP = 14;
+    Einstein.mesP = 3;
+    Einstein.anoP = 1879;
+    //Einstein.idade = -1;
+    Newton.diaP = 4;
+    Newton.mesP = 1;
+    Newton.anoP = 1643;
+    //Newton.idade = -1;
     //Einstein.idade = Calc_Idade (Einstein, 10, 3, 2026);
-    Calc_Idade (Einstein, 10, 3, 2026);
+    //Calc_Idade (Einstein, 10, 3, 2026);
+    Einstein.Calc_Idade (10, 3, 2026);
     //Newton.idade = Calc_Idade (Newton, 10, 3, 2026);
-    Calc_Idade (Newton, 10, 3, 2026);
-    printf ("Einstein teria/faria %d anos em 2026 \n", Einstein.idade);
-    printf ("Newton teria/faria %d anos em 2026 \n", Newton.idade);
+    //Calc_Idade (Newton, 10, 3, 2026);
+    Newton.Calc_Idade (10, 3, 2026);
+    printf ("Einstein teria/faria %d anos em 2026 \n", Einstein.idadeP);
+    printf ("Newton teria/faria %d anos em 2026 \n", Newton.idadeP);
     getchar ();
     return 0;
 }
