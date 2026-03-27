@@ -31,6 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="pessoa.cpp" />
+		<Unit filename="pessoa.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
