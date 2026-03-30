@@ -6,22 +6,25 @@ Pessoa::Pessoa(int dia, int mes, int ano, const char nome[])
 	mesP = mes;
 	anoP = ano;
 	idadeP = 0;
-	strcpy(nomeP, nome);
+	strcpy_s(nomeP, nome);
 }
+
 Pessoa::Pessoa()
 {
 	diaP = 0;
 	mesP = 0;
 	anoP = 0;
-	strcpy(nomeP, "");
+	idadeP = 0;
+	strcpy_s(nomeP, "");
 }
 
 Pessoa::~Pessoa()
 {
 }
 
-int Pessoa::CalculaIdade(int dia, int mes, int ano, int idade)
+void Pessoa::CalculaIdade(int dia, int mes, int ano)
 {
+	idadeP = ano - anoP;
 	if (mesP < mes || (mesP == mes && diaP <= dia))
 	{
 		idadeP = ano - anoP;
@@ -30,5 +33,11 @@ int Pessoa::CalculaIdade(int dia, int mes, int ano, int idade)
 	{
 		idadeP = ano - anoP - 1;
 	}
-	return idadeP;
+	
+}
+
+void Pessoa::ImprimeIdade()
+{
+	std::cout << "Nome: " << nomeP << std::endl;
+	std::cout << "Idade: " << idadeP << " anos" << std::endl;
 }
