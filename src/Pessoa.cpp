@@ -38,6 +38,6 @@ void Pessoa::CalculaIdade(int dia, int mes, int ano)
 
 void Pessoa::ImprimeIdade()
 {
-	std::cout << "Nome: " << nomeP << std::endl;
-	std::cout << "Idade: " << idadeP << " anos" << std::endl;
+	cout << "Nome: " << nomeP << std::endl;
+	cout << "Idade: " << idadeP << " anos" << std::endl;
 }
