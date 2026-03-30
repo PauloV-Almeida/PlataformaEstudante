@@ -9,11 +9,11 @@ int main()
 	Pessoa Newton(4, 1, 1643, "Isaac Newton");
 
 
-	//Metodo para calcular a idade
+	//função para calcular a idade
 	Einstein.CalculaIdade(30, 3, 2026);
 	Newton.CalculaIdade(30, 3, 2026);
 
-	//Metodo para imprimir a idade
+	//função para imprimir a idade
 	Einstein.ImprimeIdade();
 	Newton.ImprimeIdade();
 
