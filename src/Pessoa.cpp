@@ -1,43 +1,24 @@
 #include "../include/Pessoa.h"
 
-Pessoa::Pessoa(int dia, int mes, int ano, const char nome[])
-{
-	diaP = dia;
-	mesP = mes;
-	anoP = ano;
-	idadeP = 0;
-	strcpy_s(nomeP, nome);
+Pessoa::Pessoa (int diaNa, int mesNa, int anoNa){
+    diaP = diaNa;
+    mesP = mesNa;
+    anoP = anoNa;
+    idadeP = -1;
 }
 
-Pessoa::Pessoa()
-{
-	diaP = 0;
-	mesP = 0;
-	anoP = 0;
-	idadeP = 0;
-	strcpy_s(nomeP, "");
+void Pessoa::Calc_Idade (int diaAT, int mesAT, int anoAT){
+    idadeP = anoAT - anoP;
+    if (mesP > mesAT){
+        idadeP --;
+    }
+    else if (mesP == mesAT){
+        if (diaP > diaAT){
+            idadeP --;
+        }
+    }
 }
 
-Pessoa::~Pessoa()
-{
-}
-
-void Pessoa::CalculaIdade(int dia, int mes, int ano)
-{
-	idadeP = ano - anoP;
-	if (mesP < mes || (mesP == mes && diaP <= dia))
-	{
-		idadeP = ano - anoP;
-	}
-	else
-	{
-		idadeP = ano - anoP - 1;
-	}
-	
-}
-
-void Pessoa::ImprimeIdade()
-{
-	std::cout << "Nome: " << nomeP << std::endl;
-	std::cout << "Idade: " << idadeP << " anos" << std::endl;
+int Pessoa::informaIdade (){
+    return idadeP;
 }

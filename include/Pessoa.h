@@ -1,18 +1,30 @@
-#pragma once
-#include "../stdafx/stdafx.h"
+#include <stdio.h>
 
-class Pessoa
-{
+class Pessoa{
 private:
-	int diaP;
-	int mesP;
-	int anoP;
-	int idadeP;
-	char nomeP[50];
+    int diaP, mesP, anoP, idadeP;
 public:
-	Pessoa(int dia, int mes, int ano, const char nome[] = "");
-	Pessoa();
-	~Pessoa();
-	void CalculaIdade(int dia, int mes, int ano);
-	void ImprimeIdade();
+    /*Pessoa (int diaNa, int mesNa, int anoNa){
+        diaP = diaNa;
+        mesP = mesNa;
+        anoP = anoNa;
+        idadeP = -1;
+    }
+    void Calc_Idade (int diaAT, int mesAT, int anoAT){
+        idadeP = anoAT - anoP;
+        if (mesP > mesAT){
+            idadeP --;
+        }
+        else if (mesP == mesAT){
+            if (diaP > diaAT){
+                idadeP --;
+            }
+        }
+    }
+    int informaIdade (){
+        return idadeP;
+    }*/
+    Pessoa (int diaNa, int mesNa, int anoNa);
+    void Calc_Idade (int diaAT, int mesAT, int anoAT);
+    int informaIdade ();
 };
