@@ -1,6 +1,55 @@
 #include "../include/Principal.h"
 
-Principal::Principal()
+//podemos inicializar dessas duas formas
+Principal::Principal()/* : Simao(3, 10, 1976, "Jean Simao"),
+	Einstain(14, 3, 1879, "Albert Einstein"),
+	Newton(4, 1, 1643, "Isaac Newton")*/
 {
-	Simao
+	// ou assim
+	Simao.InicializaP(3, 10, 1976, "Jean Simao");
+	Einstain.InicializaP(14, 3, 1879, "Albert Einstein");
+	Newton.InicializaP(4, 1, 1643, "Isaac Newton");
+	
+	//aqui setamos os nomes das universidades
+	UTFPR.setNomeUni("UTFPR");
+	IAS.setNomeUni("IAS");
+	Cambridge.setNomeUni("Cambridge");
+
+	// Aqui as Universidades são associadas as pessoas, como ve simao é associado a UTFPR via
+	//passagem por referencia do 'endereço' dela
+	Simao.setUniFiliado(&UTFPR);
+	Einstain.setUniFiliado(&IAS);
+	Newton.setUniFiliado(&Cambridge);
+
+	executar();
+
+}
+
+Principal::~Principal()
+{
+}
+
+void Principal::executar()
+{
+	// quando o endl não é colocado no final, ele deixa escrever na mesma linha
+	cout << "Digite a data atual (dia mes ano):" <<endl;
+	cout << "Dia: ";
+	cin >> diaAtual;
+	cout << "Mes: ";
+	cin >> mesAtual;
+	cout << "Ano: ";
+	cin >> anoAtual;
+	
+	// aqui é onde a idade é calculada, passando a data atual para o metodo calcular idade
+	Simao.CalculaIdade(diaAtual, mesAtual, anoAtual);
+	Einstain.CalculaIdade(diaAtual, mesAtual, anoAtual);
+	Newton.CalculaIdade(diaAtual, mesAtual, anoAtual);
+	Simao.ImprimeIdade();
+	Einstain.ImprimeIdade();
+	Newton.ImprimeIdade();
+
+	// aqui é onde é mostrado onde cada pessoa trabalha
+	Simao.ondeTrabalha();
+	Einstain.ondeTrabalha();
+	Newton.ondeTrabalha();
 }
