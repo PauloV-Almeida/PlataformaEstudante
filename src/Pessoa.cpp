@@ -2,20 +2,12 @@
 
 Pessoa::Pessoa(int dia, int mes, int ano, const char nome[])
 {
-	diaP = dia;
-	mesP = mes;
-	anoP = ano;
-	idadeP = 0;
-	strcpy_s(nomeP, nome);
+
 }
 
 Pessoa::Pessoa()
 {
-	diaP = 0;
-	mesP = 0;
-	anoP = 0;
-	idadeP = 0;
-	strcpy_s(nomeP, "");
+	
 }
 
 Pessoa::~Pessoa()

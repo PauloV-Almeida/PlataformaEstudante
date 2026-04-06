@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Pessoa.cpp" />
+    <ClCompile Include="src\Principal.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Pessoa.h" />
+    <ClInclude Include="include\Principal.h" />
     <ClInclude Include="stdafx\stdafx.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

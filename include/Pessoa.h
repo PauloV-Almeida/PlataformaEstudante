@@ -13,6 +13,7 @@ public:
 	Pessoa(int dia, int mes, int ano, const char nome[] = "");
 	Pessoa();
 	~Pessoa();
+	void InicializaP(int dia, int mes, int ano, const char nome[] = "");
 	void CalculaIdade(int dia, int mes, int ano);
 	void ImprimeIdade();
 };
