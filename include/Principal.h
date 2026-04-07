@@ -12,7 +12,9 @@ private:
 	Pessoa Simao;
 	Pessoa Einstain;
 	Pessoa Newton;
-	
+	Pessoa Christiano;
+	Pessoa Diego;
+
 	// aqui é criado os objetos da classe universidade
 	// e é agregada ao(s) objeto(s) da classe 
 	Universidade UTFPR;
@@ -24,8 +26,16 @@ private:
 	Departamento DAINF;
 	Departamento MateaticaIAS;
 	Departamento FisicaCambridge;
+	Departamento ModaUFTPR;
+	Departamento TecnologiaUTFPR;
+	
+	
 public:
 	Principal();
 	~Principal();
 	void executar();
 };
+
+/*
+
+*/
