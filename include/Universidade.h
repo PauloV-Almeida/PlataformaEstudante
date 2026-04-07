@@ -4,15 +4,16 @@ class Departamento;
 class Universidade
 {
 private:
-	char nomeUni[50];
-	Departamento* pDepUni;
+	char nome[130];
+	Departamento* pDepUni[50];
 public:
-	Universidade(const char nUni[] = "");
+	Universidade();
 	~Universidade();
 
-	void setNomeUni(const char nUni[] = "");	
-	const char* getNomeUni();
+	void setNome(const char n[] = "");	
+	const char* getNome();
 	//agregação de departamento a universidade
-	void setnomeDep(Departamento* nDep);
+	void setDepts(Departamento* pDep, int ctd);
+	void imprimeDepts();
 };
 

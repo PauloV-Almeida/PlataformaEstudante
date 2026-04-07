@@ -6,7 +6,7 @@ private:
 	int idDep;
 	char nomeDep[130];
 public:
-	Departamento(const char nDep[] = "");
+	Departamento();
 	~Departamento();
 
 	int getIdDep();

@@ -57,7 +57,7 @@ void Pessoa::ondeTrabalha()
 {
 	if (pUniFiliado != nullptr)
 	{
-		cout << nomeP << " trabalha na universidade " << pUniFiliado->getNomeUni() << std::endl;
+		cout << nomeP << " trabalha na universidade " << pUniFiliado->getNome() << std::endl;
 	}
 	else
 	{
@@ -77,7 +77,7 @@ void Pessoa::qualDepTrabalha()
 {
 	if (pDepFiliado != nullptr)
 	{
-		cout << nomeP << " trabalha para a "<< pUniFiliado->getNomeUni() << " e no Departamento  " << pDepFiliado->getNomeDep() << std::endl;
+		cout << nomeP << " trabalha para a "<< pUniFiliado->getNome() << " e no Departamento  " << pDepFiliado->getNomeDep() << std::endl;
 	}
 	else
 	{

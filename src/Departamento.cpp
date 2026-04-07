@@ -1,8 +1,9 @@
 #include "../include/Departamento.h"
 
-Departamento::Departamento(const char nDep[])
+Departamento::Departamento()
 {
-	strcpy_s(nomeDep, nDep);
+	strcpy_s(nomeDep, "");
+	
 }
 
 Departamento::~Departamento()

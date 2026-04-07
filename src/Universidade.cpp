@@ -2,27 +2,41 @@
 #include "../include/Departamento.h"
 #include <string.h>
 
-Universidade::Universidade(const char nUni[])
+Universidade::Universidade()
 {
-	strcpy_s(nomeUni, nUni);
-	pDepUni = nullptr;
+	strcpy_s(nome, "");
+	for (int i = 0; i < 50; i++)
+	{
+		pDepUni[i] = nullptr;
+	}
 }
 
 Universidade::~Universidade()
 {
 }
 
-void Universidade::setNomeUni(const char nUni[])
+void Universidade::setNome(const char n[])
 {
-	strcpy_s(nomeUni, nUni);
+	strcpy_s(nome, n);
 }
 
-const char* Universidade::getNomeUni()
+const char* Universidade::getNome()
 {
-	return nomeUni;
+	return nome;
 }
 
-void Universidade::setnomeDep(Departamento* nDep)
+void Universidade::setDepts(Departamento* pDep, int ctd)
 {
-	pDepUni = nDep;
+	pDepUni[ctd] = pDep;
+}
+
+void Universidade::imprimeDepts()
+{
+	for (int i = 0; i < 50; i++)
+	{
+		if (pDepUni[i] != nullptr)
+		{
+			cout << pDepUni[i]->getNomeDep() << endl;
+		}
+	}
 }

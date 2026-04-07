@@ -11,9 +11,9 @@ Principal::Principal()/* : Simao(3, 10, 1976, "Jean Simao"),
 	Newton.InicializaP(4, 1, 1643, "Isaac Newton");
 	
 	//aqui setamos os nomes das universidades
-	UTFPR.setNomeUni("UTFPR");
-	IAS.setNomeUni("IAS");
-	Cambridge.setNomeUni("Cambridge");
+	UTFPR.setNome("UTFPR");
+	IAS.setNome("IAS");
+	Cambridge.setNome("Cambridge");
 
 	// Aqui as Universidades são associadas as pessoas, como ve simao é associado a UTFPR via
 	//passagem por referencia do 'endereço' dela
@@ -27,9 +27,9 @@ Principal::Principal()/* : Simao(3, 10, 1976, "Jean Simao"),
 	FisicaCambridge.setNomeDep("Fisica");
 
 	//"Agregação" dos Departamentos as Universidades
-	UTFPR.setnomeDep(&DAINF);
-	IAS.setnomeDep(&MateaticaIAS);
-	Cambridge.setnomeDep(&FisicaCambridge);
+	UTFPR.setDepts(&DAINF, 0);
+	IAS.setDepts(&MateaticaIAS, 1);
+	Cambridge.setDepts(&FisicaCambridge, 2);
 
 	// Filiação dos Departamentos as Pessoas
 	Simao.setDepFiliado(&DAINF);
