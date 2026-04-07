@@ -1,5 +1,6 @@
 #include "../include/Pessoa.h"
 #include "../include/Universidade.h"
+#include "../include/Departamento.h"
 
 Pessoa::Pessoa(int dia, int mes, int ano, const char nome[])
 {
@@ -45,6 +46,8 @@ void Pessoa::ImprimeIdade()
 	cout << "Idade: " << idadeP << " anos" << std::endl;
 }
 
+// aqui é onde a pessoa é associada a universidade, passando
+// o endereço da universidade para o ponteiro de associação
 void Pessoa::setUniFiliado(Universidade* pUni)
 {
 	pUniFiliado = pUni;
@@ -59,5 +62,25 @@ void Pessoa::ondeTrabalha()
 	else
 	{
 		cout << nomeP << " não está associado a nenhuma universidade." << std::endl;
+	}
+}
+
+// aqui é onde a pessoa é associada a departamento, passando
+// o endereço do departamento para o ponteiro de associação
+
+void Pessoa::setDepFiliado(Departamento* pDep)
+{
+	pDepFiliado = pDep;
+}
+
+void Pessoa::qualDepTrabalha()
+{
+	if (pDepFiliado != nullptr)
+	{
+		cout << nomeP << " trabalha para a "<< pUniFiliado->getNomeUni() << " e no Departamento  " << pDepFiliado->getNomeDep() << std::endl;
+	}
+	else
+	{
+		cout << nomeP << " não está associado a nenhum departamento." << std::endl;
 	}
 }

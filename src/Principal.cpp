@@ -21,6 +21,21 @@ Principal::Principal()/* : Simao(3, 10, 1976, "Jean Simao"),
 	Einstain.setUniFiliado(&IAS);
 	Newton.setUniFiliado(&Cambridge);
 
+	// aqui setamos os nomes dos departamentos
+	DAINF.setNomeDep("DAINF");
+	MateaticaIAS.setNomeDep("Matematica");
+	FisicaCambridge.setNomeDep("Fisica");
+
+	//"Agregação" dos Departamentos as Universidades
+	UTFPR.setnomeDep(&DAINF);
+	IAS.setnomeDep(&MateaticaIAS);
+	Cambridge.setnomeDep(&FisicaCambridge);
+
+	// Filiação dos Departamentos as Pessoas
+	Simao.setDepFiliado(&DAINF);
+	Einstain.setDepFiliado(&MateaticaIAS);
+	Newton.setDepFiliado(&FisicaCambridge);
+
 	executar();
 
 }
@@ -52,4 +67,9 @@ void Principal::executar()
 	Simao.ondeTrabalha();
 	Einstain.ondeTrabalha();
 	Newton.ondeTrabalha();
+
+	// aqui é onde é mostrado qual departamento cada pessoa trabalha
+	Simao.qualDepTrabalha();
+	Einstain.qualDepTrabalha();
+	Newton.qualDepTrabalha();
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "Pessoa.h"
 #include "Universidade.h"
+#include "Departamento.h"
 
 class Principal
 {
@@ -17,6 +18,12 @@ private:
 	Universidade UTFPR;
 	Universidade IAS;
 	Universidade Cambridge;
+
+	// aqui é criado os objetos da classe departamento
+	// e é agregada ao(s) objeto(s) da classe universidade
+	Departamento DAINF;
+	Departamento MateaticaIAS;
+	Departamento FisicaCambridge;
 public:
 	Principal();
 	~Principal();
