@@ -9,6 +9,7 @@ Principal::Principal()/* : Simao(3, 10, 1976, "Jean Simao"),
 	Simao.InicializaP(3, 10, 1976, "Jean Simao");
 	Einstain.InicializaP(14, 3, 1879, "Albert Einstein");
 	Newton.InicializaP(4, 1, 1643, "Isaac Newton");
+	Daniel.InicializaP(9, 4, 2005, "Daniel Victor");
 	
 	//aqui setamos os nomes das universidades
 	UTFPR.setNomeUni("UTFPR");
@@ -62,6 +63,8 @@ void Principal::executar()
 	Simao.ImprimeIdade();
 	Einstain.ImprimeIdade();
 	Newton.ImprimeIdade();
+	Daniel.CalculaIdade(diaAtual, mesAtual, anoAtual);
+	Daniel.ImprimeIdade();
 
 	// aqui é onde é mostrado onde cada pessoa trabalha
 	Simao.ondeTrabalha();

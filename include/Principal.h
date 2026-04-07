@@ -12,6 +12,7 @@ private:
 	Pessoa Simao;
 	Pessoa Einstain;
 	Pessoa Newton;
+	Pessoa Daniel;
 	
 	// aqui é criado os objetos da classe universidade
 	// e é agregada ao(s) objeto(s) da classe 
