@@ -1,11 +1,10 @@
 #pragma once
 #include "../stdafx/stdafx.h"
-class Universidade;
-class Departamento;
 
 class Pessoa
 {
-private:
+protected:
+
 	int diaP;
 	int mesP;
 	int anoP;
@@ -14,13 +13,6 @@ private:
 
 	int idP;
 
-	//ponteiro de associação entre os objetos
-	Universidade* pUniFiliado;
-
-	//ponteiro de associação entre os objetos
-	Departamento* pDepFiliado;
-	
-
 public:
 	Pessoa(int dia, int mes, int ano, const char nome[] = "");
 	Pessoa();
@@ -28,14 +20,9 @@ public:
 	void InicializaP(int dia, int mes, int ano, const char nome[] = "");
 	void CalculaIdade(int dia, int mes, int ano);
 	void ImprimeIdade();
-
-
-	//Este metodo associa universidade a pessoa
-	void setUniFiliado(Universidade* pUni);
-	void ondeTrabalha();
-
-	//Este metodo associa departamento a pessoa
-	void setDepFiliado(Departamento* pDep);
-	void qualDepTrabalha();
+	void setIdP(int id) { idP = id; }
+	int getIdP() { return idP; }
+	void setNomeP(const char n[]) { strcpy_s(nomeP, n); }
+	const char* getNomeP() { return nomeP; }
 
 };

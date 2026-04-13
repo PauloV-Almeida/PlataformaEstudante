@@ -23,6 +23,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Pessoa.cpp" />
     <ClCompile Include="src\Principal.cpp" />
+    <ClCompile Include="src\Professor.cpp" />
     <ClCompile Include="src\Universidade.cpp" />
     <ClCompile Include="stdafx\stdafx.cpp" />
   </ItemGroup>
@@ -30,6 +31,7 @@
     <ClInclude Include="include\Departamento.h" />
     <ClInclude Include="include\Pessoa.h" />
     <ClInclude Include="include\Principal.h" />
+    <ClInclude Include="include\Professor.h" />
     <ClInclude Include="include\Universidade.h" />
     <ClInclude Include="stdafx\stdafx.h" />
   </ItemGroup>
